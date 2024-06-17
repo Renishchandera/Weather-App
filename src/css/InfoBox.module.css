@@ -1,0 +1,96 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.errorHeading
+{
+    text-align: center;
+    color: red;
+    border: 1px solid black;
+    height: 2rem;
+    width: 6rem;
+    margin: 0 auto;
+}
+
+.weatherInfo
+{
+    color: blue;
+    text-align: center;
+    margin: 0 auto;
+    font-size: x-large;
+    margin-top: 1rem;
+}
+
+.weatherCardsContainer
+{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    flex-wrap: wrap;
+}
+
+.weatherCardsContainer li
+{
+    height: max-content;
+    width: 20%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid darkgrey;
+    border-radius: 1rem;
+    margin: 1rem 3rem;
+    transition: 0.4s all ease;
+}
+.weatherCardsContainer li:hover
+{
+    box-shadow: 0px 5px 5px darkgrey;
+    transform: scale(1.1);
+}
+
+.cardHeading
+{
+    color:lightcoral;
+    font-size: x-large;
+    font-weight: 900;
+    margin: 1rem;
+
+}
+
+.data
+{
+    font-size: larger;
+    font-weight: 800;
+    color:darkmagenta;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 1000px)
+{
+    .weatherCardsContainer li
+    {
+        margin: 0.5rem;
+    }
+    .cardHeading
+    {
+        font-size: large;
+        margin: 0.1rem;
+    }
+
+}
+@media screen and (max-width: 600px)
+{
+    .weatherCardsContainer li
+    {
+        width: 90%;
+        height: min-content;
+        padding: 1rem;
+    }
+
+}

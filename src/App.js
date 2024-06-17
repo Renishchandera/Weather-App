@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import {memo, useCallback, useMemo, useState} from 'react';
 import './App.css';
+import './css/AppName.css';
+import SearchBox from './SearchBox';
+import InfoBox from './InfoBox';
+import Footer from './Footer';
+
+const AppName = memo(() =>
+{
+  return (
+    <>
+      <h1>Weather App</h1>
+    </>
+  );
+});
 
 function App() {
+
+  const [result, setResult] = useState({success: true});
+
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <AppName/>
+      <SearchBox weatherInfo={setResult}/>
+      <InfoBox result={result}/>
+      < Footer />
+    </>
   );
 }
 
-export default App;
+export default (App);
