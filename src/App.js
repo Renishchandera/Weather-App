@@ -1,12 +1,11 @@
-import {memo, useCallback, useMemo, useState} from 'react';
+import { memo, useCallback, useMemo, useState, useRef } from 'react';
 import './App.css';
 import './css/AppName.css';
 import SearchBox from './SearchBox';
 import InfoBox from './InfoBox';
 import Footer from './Footer';
 
-const AppName = memo(() =>
-{
+const AppName = memo(() => {
   return (
     <>
       <h1>Weather App</h1>
@@ -16,19 +15,23 @@ const AppName = memo(() =>
 
 function App() {
 
-  const [result, setResult] = useState({success: true});
+  const [result, setResult] = useState({ success: true });
+  const [loading, setLoading] = useState(false);
 
-
-  
+  const updateResult = useCallback((result) => {
+    setResult(result);
+  }, []);
 
   return (
     <>
-      <AppName/>
-      <SearchBox weatherInfo={setResult}/>
-      <InfoBox result={result}/>
+     <div className={"background"}>
+      <AppName  />
+      <SearchBox weatherInfo={updateResult} setLoading={setLoading} />
+      <InfoBox result={result} loading={loading}/>
       < Footer />
+     </div>
     </>
   );
 }
 
-export default (App);
+export default memo(App);

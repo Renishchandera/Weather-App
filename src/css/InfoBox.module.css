@@ -71,6 +71,30 @@
     padding: 1rem;
 }
 
+
+#loader
+{
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    border-top: 5px solid #ff0066;
+    border-left: 5px solid #6600cc;
+    border-right: 5px solid #6600cc;
+    border-bottom: 5px solid #ff0066;
+    transform: rotateZ(0);
+    animation: loader 1s steps(100) infinite;
+}
+@keyframes loader
+{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
 @media screen and (max-width: 1000px)
 {
     .weatherCardsContainer li

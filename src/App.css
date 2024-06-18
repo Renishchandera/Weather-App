@@ -36,7 +36,21 @@
     transform: rotate(360deg);
   }
 }
-body
+
+.background
 {
-    background-color:bisque;
+    background: url('./images/broken\ clouds.jpeg');
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+@media screen and (max-width: 800px) {
+  .background{
+    background-size: 200%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .background{
+    background-size: 300%;
+  }
 }

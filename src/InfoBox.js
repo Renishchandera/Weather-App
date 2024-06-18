@@ -22,7 +22,7 @@ function ErrorComponent({err})
     
 }
 
-function InfoBox({result})
+function InfoBox({result, loading})
 {
 
     console.log("InfoBox Rendered");
@@ -44,6 +44,7 @@ function InfoBox({result})
                 <div>
                     <h3 className={style.weatherInfo} >Weather Info</h3> 
                      <h3 className={style.weatherInfo} >{result.city}</h3>
+                     {loading && <div id={style.loader}></div>}
                         <ul className={style.weatherCardsContainer} >
                         <li key={"weather"}><div className={style.cardHeading}>Weather</div><span className={style.data}>{result.weather}</span></li>
                              <li key={"temp"}><div className={style.cardHeading}>Temperature</div><span className={style.data}>{result.temp}</span></li>
