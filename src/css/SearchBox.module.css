@@ -5,7 +5,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: antiquewhite;
+    border-radius: 2rem;
+    margin: 0 auto;
     padding: 1rem;
 }
 
@@ -25,7 +26,12 @@
 .searchbtn:hover
 {
     color: black;
-    background-color: aquamarine;
+    transform: scale(0.95);
+    background-color: darkcyan;
+}
+.searchbtn:active
+{
+    transform: scale(0.9);
 }
 input[type="text"]
 {
@@ -33,4 +39,11 @@ input[type="text"]
     padding: 0 1rem;
     border: 2px solid darkgray;
     border-radius: 1rem;
+    transition: 0.3s all ease;
+}
+input[type="text"]:focus
+{
+    background-color: darkcyan;
+    font-weight: 700;
+    color: whitesmoke;
 }

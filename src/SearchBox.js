@@ -66,7 +66,7 @@ function SearchBox({ weatherInfo , setLoading}) {
                 <form>
                     <input type="text" placeholder="Enter City Name" id='searchbox' name='searchbox' required onChange={handleChange} />
                     <br />
-                    <input type='submit' value='Search' className={style.searchbtn} onClick={handleClick} />
+                    <input type='submit' value='Search' className={style.searchbtn} onClick={handleClick}/>
                 </form>
             </div>
         </>

@@ -16,7 +16,8 @@
 
 .weatherInfo
 {
-    color: blue;
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     margin: 0 auto;
     font-size: x-large;
@@ -43,20 +44,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid darkgrey;
+    border: 2px solid whitesmoke;
     border-radius: 1rem;
     margin: 1rem 3rem;
     transition: 0.4s all ease;
 }
 .weatherCardsContainer li:hover
 {
-    box-shadow: 0px 5px 5px darkgrey;
+    box-shadow: 0px 5px 5px black;
     transform: scale(1.1);
 }
 
 .cardHeading
 {
-    color:lightcoral;
+    color: white;
     font-size: x-large;
     font-weight: 900;
     margin: 1rem;

@@ -39,9 +39,9 @@
 
 .background
 {
-    background: url('./images/broken\ clouds.jpeg');
+    background: url('./images/clear\ sky.jpeg');
     background-size: 100%;
-    background-attachment: fixed;
+    background-attachment: fixed; 
 }
 
 @media screen and (max-width: 800px) {

@@ -25,7 +25,7 @@ function ErrorComponent({err})
 function InfoBox({result, loading})
 {
 
-    console.log("InfoBox Rendered");
+    console.log("InfoBox Rendered")
     
     if(result.success === false)
     {

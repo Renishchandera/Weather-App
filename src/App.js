@@ -1,4 +1,4 @@
-import { memo, useCallback, useMemo, useState, useRef } from 'react';
+import { memo, useCallback, useMemo,useEffect, useState, useRef } from 'react';
 import './App.css';
 import './css/AppName.css';
 import SearchBox from './SearchBox';
@@ -13,19 +13,29 @@ const AppName = memo(() => {
   );
 });
 
+
 function App() {
 
   const [result, setResult] = useState({ success: true });
   const [loading, setLoading] = useState(false);
+  const [background, setBG] = useState("./images/haze.jpeg");
 
   const updateResult = useCallback((result) => {
     setResult(result);
   }, []);
 
+  useEffect(() => {
+    if (result.success && result.weather) {
+      setBG(`./images/${result.weather}.jpeg`);
+    }
+  }, [result]);
+
+
   return (
     <>
-     <div className={"background"}>
-      <AppName  />
+    {console.log("APP RENDERED")}
+     <div  className={"background"}>
+      <AppName/>
       <SearchBox weatherInfo={updateResult} setLoading={setLoading} />
       <InfoBox result={result} loading={loading}/>
       < Footer />
